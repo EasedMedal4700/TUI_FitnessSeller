@@ -10,6 +10,7 @@ from textual.screen import Screen
 from textual import events
 from .home_screen import HomeScreen
 from .html_screen import HtmlScreen
+from .eta_screen import EtasScreen
 
 class ContainersScreen(Screen):
     def compose(self) -> ComposeResult:
@@ -104,6 +105,7 @@ class ContainerApp(App):
         "home": HomeScreen,
         "containers": ContainersScreen,
         "html": HtmlScreen,
+        "etas": EtasScreen,
     }
 
     def on_mount(self):

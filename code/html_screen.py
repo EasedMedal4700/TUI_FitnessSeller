@@ -9,6 +9,7 @@ from textual.app import ComposeResult
 from textual.screen import Screen
 from textual.widgets import Button, Static, Header, Footer
 from textual.containers import Vertical, Horizontal
+from textual import events
 
 
 def safe_name(name: str) -> str:
@@ -40,6 +41,18 @@ class HtmlScreen(Screen):
             self.app.pop_screen()
         elif event.button.id == "exit":
             self.app.exit()
+
+    def on_key(self, event: events.Key) -> None:
+        """Allow arrow keys and hjkl to move focus between buttons."""
+        key = event.key
+        if key in ("left", "h"):
+            self.focus_previous()
+        elif key in ("right", "l"):
+            self.focus_next()
+        elif key in ("up", "k"):
+            self.focus_previous()
+        elif key in ("down", "j"):
+            self.focus_next()
 
     def fetch_all(self) -> None:
         # Run the actual fetch in a background thread so the TUI remains responsive
