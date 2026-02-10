@@ -1,0 +1,225 @@
+{
+  "tracking": [
+    {
+      "event": "Cargo Status Update",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Nantong Pt",
+      "details": "Export Barge Departure from Inland Port"
+    },
+    {
+      "event": "Container arrival at first POL (Gate in)",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Nantong Pt",
+      "details": ""
+    },
+    {
+      "event": "Container empty to shipper",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Nantong Pt",
+      "details": ""
+    },
+    {
+      "event": "en|2026-04-01T02:00:00-04:00",
+      "operation": "ESTIMATED DELIVERY DATE/TIME BASED ON CURRENT SAILING SCHEDULE, SUBJECT TO CHANGES"
+    },
+    {
+      "event": "MBOL"
+    },
+    {
+      "event": "HDMUNKGZ88826900"
+    },
+    {
+      "event": "HBOL"
+    },
+    {
+      "event": "SHAOE2601023"
+    },
+    {
+      "event": "Booking Number"
+    },
+    {
+      "event": "NKGZ88826900"
+    },
+    {
+      "event": "Executed Place"
+    },
+    {
+      "event": "Hamburg"
+    },
+    {
+      "event": "Declared Value"
+    },
+    {
+      "event": "Description of Goods"
+    },
+    {
+      "event": "SPORTING EQUIPMENT"
+    },
+    {
+      "event": "Contact:Â"
+    },
+    {
+      "event": "Nantong Dejia Sport Goods Co., Ltd."
+    },
+    {
+      "event": "Rm 601, Sanxi Mansion, Gonglong RdNantong,Â ÂChina"
+    },
+    {
+      "event": "Phone:Â-"
+    },
+    {
+      "event": "Contact:ÂMarvin Jeurissen"
+    },
+    {
+      "event": "Fitness Seller B.V."
+    },
+    {
+      "event": "Dr. Nolenslaan 113Sittard,Â Â 6136 GMNetherlandsPhone:Â +32(0)85-5800800"
+    },
+    {
+      "event": "Phone:Â+32(0)85-5800800"
+    },
+    {
+      "event": "Departure Date/Timeen|2026-01-26T01:12:39-05:00",
+      "operation": "Arrival Date/Timeen|2026-03-28T01:12:39-04:00",
+      "location": "Courier Name"
+    },
+    {
+      "event": "Point of Origin or FTZ Number",
+      "operation": "Port of LoadingSHANGHAI",
+      "location": "Tracking Number"
+    },
+    {
+      "event": "Loading Pier or Terminal",
+      "operation": "Pre-Carriage byNANTONG",
+      "location": "Status"
+    },
+    {
+      "event": "Place of Receipt by Pre-CarrierWU XIANG 79 2609E",
+      "operation": "Exporting CarrierHMM (Germany) GmbH & Co. KGPhone:Â +49 (0) 40 / 36954-0"
+    },
+    {
+      "event": "Closed Job?:No",
+      "operation": ""
+    },
+    {
+      "event": "Closed Job?:No"
+    },
+    {
+      "event": "",
+      "date_time": "Weight24054.000Â kg",
+      "operation": "Package40 Ft. High Cube",
+      "location": "Dimensions12.060x2.438x2.591m",
+      "details": "Part Number25H0870767"
+    },
+    {
+      "event": "",
+      "date_time": "53029.993Â lb",
+      "operation": "Invoice Number",
+      "location": "P.O. Number",
+      "details": "DescriptionHMMU4105102/25H0870767/40HQ/CY/CY"
+    },
+    {
+      "event": "",
+      "date_time": "Expiration Date",
+      "operation": "Serial NumberHMMU4105102",
+      "location": "NotesMBOL:Â HDMUNKGZ88826900Â HBOL:Â SHAOE2601023Â Container #:Â HMMU4105102Â Seal #1:Â 25H0870767Â",
+      "details": "Lot Number"
+    },
+    {
+      "event": "",
+      "date_time": "Weight24054.000Â kg",
+      "operation": "PackagePackage",
+      "location": "Dimensions0.000x0.000x0.000m",
+      "details": ""
+    },
+    {
+      "event": "",
+      "date_time": "53029.993Â lb",
+      "operation": "Invoice Number",
+      "location": "P.O. Number",
+      "details": "Description"
+    },
+    {
+      "event": "Â",
+      "operation": "Weight",
+      "location": "Volume"
+    },
+    {
+      "event": "Â",
+      "operation": "1(576)",
+      "location": "24054.000Â kg",
+      "details": "76.181Â m3"
+    },
+    {
+      "event": "Â",
+      "operation": "76.181Â m3"
+    },
+    {
+      "event": "Documents"
+    },
+    {
+      "event": "Bill of Lading_Blue Point LineOpen",
+      "operation": "Open",
+      "location": ""
+    },
+    {
+      "event": "Bill of Lading_Blue Point Line"
+    },
+    {
+      "event": "Cargo Status Update",
+      "date_time": "en|2026-01-28T15:43:00-05:00",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Nantong Pt",
+      "details": "Export Barge Departure from Inland Port"
+    },
+    {
+      "event": "Container arrival at first POL (Gate in)",
+      "date_time": "en|2026-01-24T10:31:00-05:00",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Nantong Pt",
+      "details": ""
+    },
+    {
+      "event": "Container empty to shipper",
+      "date_time": "en|2026-01-22T10:25:00-05:00",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Nantong Pt",
+      "details": ""
+    }
+  ],
+  "pod": [
+    {
+      "date_time": "Weight24054.000Â kg",
+      "received_by": "Volume63.440Â m3",
+      "comments": null
+    },
+    {
+      "date_time": "53029.993Â lb",
+      "received_by": "Vol. Weight63.440Â m3",
+      "comments": null
+    },
+    {
+      "date_time": "Expiration Date",
+      "received_by": null,
+      "comments": null
+    },
+    {
+      "date_time": "Weight24054.000Â kg",
+      "received_by": "Volume63.440Â m3",
+      "comments": null
+    },
+    {
+      "date_time": "53029.993Â lb",
+      "received_by": "Vol. Weight63.440Â m3",
+      "comments": null
+    },
+    {
+      "date_time": "en|2026-04-01T02:00:00-04:00",
+      "received_by": "Fitness Seller B.V.",
+      "comments": "ESTIMATED DELIVERY DATE/TIME BASED ON CURRENT SAILING SCHEDULE, SUBJECT TO CHANGES"
+    }
+  ],
+  "container": "25#07",
+  "url": "https://transtrack.magaya.net/TransTracking?ID=38049&SH=c3952830-f71a-4ef0-97b1-2e479dbd1637&LG=en&XM=0"
+}
