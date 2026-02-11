@@ -13,6 +13,32 @@ This project contains a Python script to read data from an Excel file named `con
    - On Windows: `.\.venv\Scripts\Activate.ps1`
    - On macOS/Linux: `source .venv/bin/activate`
 
+Running from a different drive (Windows)
+
+If your project folder is on the `C:` drive (for example `C:\code\TUI_FitnessSeller`), open PowerShell or Command Prompt and run:
+
+- PowerShell:
+
+```powershell
+C:\
+cd d:\code\TUI_FitnessSeller
+.\.venv\Scripts\Activate.ps1
+pip install openpyxl textual requests beautifulsoup4 lxml
+python main.py
+```
+
+- Command Prompt (cmd.exe):
+
+```cmd
+C:
+cd \code\TUI_FitnessSeller
+.\\.venv\\Scripts\\activate.bat
+pip install openpyxl textual requests beautifulsoup4 lxml
+python main.py
+```
+
+If you use Git Bash or WSL, use the appropriate `activate` command for that shell (e.g., `source .venv/bin/activate`).
+
 ## Running the Script
 
 1. Place the `containers.xlsx` file in the `input/` directory.

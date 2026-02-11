@@ -5,6 +5,7 @@ import json
 import threading
 import requests
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 from textual.app import ComposeResult
 from textual.screen import Screen
 from textual.widgets import Button, Static, Header, Footer
@@ -26,6 +27,7 @@ class HtmlScreen(Screen):
         yield Vertical(
             Horizontal(
                 Button("Fetch All HTML", id="fetch_all"),
+                Button("List Files", id="list_files"),
                 Button("Back to Home", id="back"),
                 Button("Exit", id="exit"),
             ),
@@ -37,6 +39,8 @@ class HtmlScreen(Screen):
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "fetch_all":
             self.fetch_all()
+        elif event.button.id == "list_files":
+            self.list_files()
         elif event.button.id == "back":
             self.app.pop_screen()
         elif event.button.id == "exit":
@@ -99,6 +103,56 @@ class HtmlScreen(Screen):
 
                 # parse tracking and pod info
                 parsed = self._parse_tracking_page(text)
+                # find and download relevant attachments (packing lists, invoices, BLs)
+                attachments = []
+                try:
+                    page_soup = BeautifulSoup(text, 'html.parser')
+                    keywords = ('packing', 'invoice', 'bill of lading', 'bl', 'packing list')
+                    for a in page_soup.find_all('a'):
+                        anchor_text = a.get_text(separator=' ', strip=True) or ''
+                        href = a.get('href')
+                        if not href:
+                            continue
+                        low = anchor_text.lower()
+                        if any(k in low for k in keywords):
+                            file_url = urljoin(link, href)
+                            try:
+                                resp_file = requests.get(file_url, timeout=30, stream=True)
+                                resp_file.raise_for_status()
+                                # determine filename
+                                cd = resp_file.headers.get('content-disposition') or ''
+                                if 'filename=' in cd:
+                                    fname = cd.split('filename=')[-1].strip('"')
+                                else:
+                                    fname = os.path.basename(file_url.split('?', 1)[0])
+                                # fallback to anchor text
+                                if not fname:
+                                    safe_anchor = safe_name(anchor_text)
+                                    fname = f"{safe_name(container)}_{safe_anchor}"
+                                # ensure extension
+                                root, ext = os.path.splitext(fname)
+                                if not ext:
+                                    ct = resp_file.headers.get('content-type', '')
+                                    if 'pdf' in ct:
+                                        ext = '.pdf'
+                                    elif 'html' in ct:
+                                        ext = '.html'
+                                    else:
+                                        ext = '.bin'
+                                    fname = root + ext
+
+                                save_path = os.path.join(html_dir, f"{safe_name(container)}_{safe_name(root)}{ext}")
+                                with open(save_path, 'wb') as bf:
+                                    for chunk in resp_file.iter_content(chunk_size=8192):
+                                        if chunk:
+                                            bf.write(chunk)
+                                attachments.append(os.path.relpath(save_path))
+                            except Exception:
+                                # ignore attachment download failures per-page
+                                continue
+                except Exception:
+                    attachments = []
+                parsed['attachments'] = attachments
                 parsed['container'] = container
                 parsed['url'] = link
 
@@ -127,6 +181,31 @@ class HtmlScreen(Screen):
                 out.update(f"Failed {container}: {e}")
 
         out.update(f"Finished. {count} saved, {errs} failures.")
+
+    def list_files(self) -> None:
+        out = self.query_one('#output', Static)
+        html_dir = os.path.join('data', 'container_HTML')
+        if not os.path.exists(html_dir):
+            out.update('No container_HTML directory found.')
+            return
+        files = sorted(os.listdir(html_dir))
+        if not files:
+            out.update('No files in data/container_HTML')
+            return
+
+        # Group by container prefix (filename before first underscore or dot)
+        groups = {}
+        for f in files:
+            name = f
+            base = name.split('_', 1)[0].split('.',1)[0]
+            groups.setdefault(base, []).append(name)
+
+        lines = []
+        for container, flist in sorted(groups.items()):
+            lines.append(f"Container: {container}")
+            for fn in sorted(flist):
+                lines.append(f"  - {fn}")
+        out.update('\n'.join(lines))
 
     def _parse_tracking_page(self, html: str) -> dict:
         soup = BeautifulSoup(html, 'html.parser')

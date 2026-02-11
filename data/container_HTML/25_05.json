@@ -182,7 +182,7 @@
     },
     {
       "event": "BPL OBL SHAOE2511021Open- Arrival Notice - Ocean - RatedOpen",
-      "date_time": "FW_ Invoice 40495752 als PDFDownloadðInvoice 40495752 - Kunden-Nr. 1200456Downloadðpacking list of DEKA25147DownloadðBL of DEKA25147Downloadð",
+      "date_time": "FW_ Invoice 40495752 als PDFDownloadðInvoice 40495752 - Kunden-Nr. 1200456Downloadð1115100-HAMOI260204_TTWDownloadðpacking list of DEKA25147DownloadðBL of DEKA25147Downloadð1115100-HAMOI260204_UTBDownloadð",
       "operation": "Open",
       "location": "- Arrival Notice - Ocean - Rated",
       "details": "Open"
@@ -200,10 +200,16 @@
       "event": "Invoice 40495752 - Kunden-Nr. 1200456"
     },
     {
+      "event": "1115100-HAMOI260204_TTW"
+    },
+    {
       "event": "packing list of DEKA25147"
     },
     {
       "event": "BL of DEKA25147"
+    },
+    {
+      "event": "1115100-HAMOI260204_UTB"
     },
     {
       "event": "Vessel departed at port of loading",
@@ -275,7 +281,7 @@
       "comments": null
     },
     {
-      "date_time": "FW_ Invoice 40495752 als PDFDownloadðInvoice 40495752 - Kunden-Nr. 1200456Downloadðpacking list of DEKA25147DownloadðBL of DEKA25147Downloadð",
+      "date_time": "FW_ Invoice 40495752 als PDFDownloadðInvoice 40495752 - Kunden-Nr. 1200456Downloadð1115100-HAMOI260204_TTWDownloadðpacking list of DEKA25147DownloadðBL of DEKA25147Downloadð1115100-HAMOI260204_UTBDownloadð",
       "received_by": "FW_ Invoice 40495752 als PDF",
       "comments": "Downloadð"
     },
@@ -285,6 +291,7 @@
       "comments": ""
     }
   ],
+  "attachments": [],
   "container": "25#05",
   "url": "https://transtrack.magaya.net/TransTracking?ID=38049&SH=e7d91f0e-2326-4ca6-ae43-eb9eaf6e8e1d&LG=en&XM=0"
 }
