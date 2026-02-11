@@ -13,6 +13,7 @@ class HomeScreen(Screen):
                 ListItem(Label("Read Containers"), id="read_containers"),
                 ListItem(Label("Fetch Container HTML"), id="fetch_html"),
                 ListItem(Label("Extract ETAs"), id="extract_etas"),
+                ListItem(Label("Download Attachments"), id="download"),
                 id="menu"
             ),
             Horizontal(
@@ -29,6 +30,8 @@ class HomeScreen(Screen):
             self.app.push_screen("html")
         elif event.item.id == "extract_etas":
             self.app.push_screen("etas")
+        elif event.item.id == "download":
+            self.app.push_screen("download")
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "exit":

@@ -11,6 +11,7 @@ from textual import events
 from .home_screen import HomeScreen
 from .html_screen import HtmlScreen
 from .eta_screen import EtasScreen
+from .download_screen import DownloadScreen
 
 class ContainersScreen(Screen):
     def compose(self) -> ComposeResult:
@@ -106,6 +107,7 @@ class ContainerApp(App):
         "containers": ContainersScreen,
         "html": HtmlScreen,
         "etas": EtasScreen,
+        "download": DownloadScreen,
     }
 
     def on_mount(self):

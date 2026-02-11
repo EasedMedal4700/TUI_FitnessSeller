@@ -1,0 +1,6 @@
+textual
+playwright
+beautifulsoup4
+requests
+openpyxl
+PyYAML

@@ -291,7 +291,14 @@
       "comments": ""
     }
   ],
-  "attachments": [],
+  "attachments": [
+    "data\\container_HTML\\25_05_FW__Invoice_40495752_als_PDF.bin",
+    "data\\container_HTML\\25_05_Invoice_40495752_-_Kunden-Nr. 1200456",
+    "data\\container_HTML\\25_05_1115100-HAMOI260204_TTW.pdf",
+    "data\\container_HTML\\25_05_packing_list_of_DEKA25147.pdf",
+    "data\\container_HTML\\25_05_BL_of_DEKA25147.pdf",
+    "data\\container_HTML\\25_05_1115100-HAMOI260204_UTB.pdf"
+  ],
   "container": "25#05",
   "url": "https://transtrack.magaya.net/TransTracking?ID=38049&SH=e7d91f0e-2326-4ca6-ae43-eb9eaf6e8e1d&LG=en&XM=0"
 }
