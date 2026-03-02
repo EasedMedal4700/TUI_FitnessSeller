@@ -3,6 +3,30 @@
     {
       "event": "Cargo Status Update",
       "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "ROTTERDAM",
+      "details": "VESSEL DELAY NOTICE: +12 days (ETA in the tracking shows already the ETA incl. the delay)"
+    },
+    {
+      "event": "Vessel departed at port of loading",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Shanghai",
+      "details": ""
+    },
+    {
+      "event": "Container loaded at first POL",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Shanghai",
+      "details": "HMM DUBLIN"
+    },
+    {
+      "event": "Cargo Status Update",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Shanghai",
+      "details": "Export Barge Arrival at Inland Port"
+    },
+    {
+      "event": "Cargo Status Update",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
       "location": "Nantong Pt",
       "details": "Export Barge Departure from Inland Port"
     },
@@ -81,7 +105,7 @@
     },
     {
       "event": "Departure Date/Timeen|2026-01-26T01:12:39-05:00",
-      "operation": "Arrival Date/Timeen|2026-03-28T01:12:39-04:00",
+      "operation": "Arrival Date/Timeen|2026-04-10T04:30:00-04:00",
       "location": "Courier Name"
     },
     {
@@ -165,6 +189,34 @@
     },
     {
       "event": "Bill of Lading_Blue Point Line"
+    },
+    {
+      "event": "Cargo Status Update",
+      "date_time": "en|2026-02-23T11:28:43-05:00",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "ROTTERDAM",
+      "details": "VESSEL DELAY NOTICE: +12 days (ETA in the tracking shows already the ETA incl. the delay)"
+    },
+    {
+      "event": "Vessel departed at port of loading",
+      "date_time": "en|2026-02-15T18:27:00-05:00",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Shanghai",
+      "details": ""
+    },
+    {
+      "event": "Container loaded at first POL",
+      "date_time": "en|2026-02-13T22:41:00-05:00",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Shanghai",
+      "details": "HMM DUBLIN"
+    },
+    {
+      "event": "Cargo Status Update",
+      "date_time": "en|2026-01-31T18:45:00-05:00",
+      "operation": "ShipmentÂ :Â SHAOE2601023",
+      "location": "Shanghai",
+      "details": "Export Barge Arrival at Inland Port"
     },
     {
       "event": "Cargo Status Update",

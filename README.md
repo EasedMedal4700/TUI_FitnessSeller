@@ -31,7 +31,7 @@ python main.py
 
 ```cmd
 C:
-cd \code\TUI_FitnessSeller
+C:
 .\\.venv\\Scripts\\activate.bat
 pip install openpyxl textual requests beautifulsoup4 lxml
 python main.py

@@ -37,8 +37,8 @@
       "details": ""
     },
     {
-      "event": "en|2026-02-25T02:00:00-05:00",
-      "operation": "ESTIMATED DELIVERY DATE - BASED ON CURRENT SAILING SCHEDULE, SUBJECT TO CHANGES"
+      "event": "en|2026-02-26T02:00:00-05:00",
+      "operation": ""
     },
     {
       "event": "MBOL"
@@ -270,12 +270,15 @@
       "comments": "Downloadð"
     },
     {
-      "date_time": "en|2026-02-25T02:00:00-05:00",
+      "date_time": "en|2026-02-26T02:00:00-05:00",
       "received_by": "Fitness Seller B.V.",
-      "comments": "ESTIMATED DELIVERY DATE - BASED ON CURRENT SAILING SCHEDULE, SUBJECT TO CHANGES"
+      "comments": ""
     }
   ],
-  "attachments": [],
+  "attachments": [
+    "data\\container_HTML\\25_06_packing_list_of_DEKA25172.pdf",
+    "data\\container_HTML\\25_06_Invoice_40497655_-_Kunden-Nr. 1200456"
+  ],
   "container": "25#06",
   "url": "https://transtrack.magaya.net/TransTracking?ID=38049&SH=e25a08a2-185f-4e0c-ae71-d5a9b0295662&LG=en&XM=0"
 }
