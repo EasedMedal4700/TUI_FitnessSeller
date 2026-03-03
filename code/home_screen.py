@@ -1,10 +1,10 @@
-from textual.app import ComposeResult
+﻿from textual.app import ComposeResult
 from textual.widgets import Header, Footer, ListView, ListItem, Label, Button
 from textual.containers import Vertical, Horizontal
-from textual.screen import Screen
-from textual import events
+from .common.base_screen import BaseScreen
 
-class HomeScreen(Screen):
+
+class HomeScreen(BaseScreen):
     def compose(self) -> ComposeResult:
         yield Header()
         yield Vertical(
@@ -14,31 +14,21 @@ class HomeScreen(Screen):
                 ListItem(Label("Fetch Container HTML"), id="fetch_html"),
                 ListItem(Label("Extract ETAs"), id="extract_etas"),
                 ListItem(Label("Download Attachments"), id="download"),
-                id="menu"
+                ListItem(Label("Clean Data"), id="clean"),
+                id="menu",
             ),
-            Horizontal(
-                Button("Exit", id="exit"),
-            ),
-            id="main"
+            id="main",
         )
         yield Footer()
 
     def on_list_view_selected(self, event: ListView.Selected):
-        if event.item.id == "read_containers":
-            self.app.push_screen("containers")
-        elif event.item.id == "fetch_html":
-            self.app.push_screen("html")
-        elif event.item.id == "extract_etas":
-            self.app.push_screen("etas")
-        elif event.item.id == "download":
-            self.app.push_screen("download")
-
-    def on_button_pressed(self, event: Button.Pressed) -> None:
-        if event.button.id == "exit":
-            self.app.exit()
-
-    def on_key(self, event: events.Key):
-        if event.key == "left":
-            self.focus_previous()
-        elif event.key == "right":
-            self.focus_next()
+        destinations = {
+            "read_containers": "containers",
+            "fetch_html":      "html",
+            "extract_etas":    "etas",
+            "download":        "download",
+            "clean":           "clean",
+        }
+        dest = destinations.get(event.item.id)
+        if dest:
+            self.app.switch_screen(dest)

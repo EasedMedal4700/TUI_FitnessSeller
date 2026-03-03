@@ -116,3 +116,9 @@ dmypy.json
 # IDE
 .vscode/
 .idea/
+
+# Local runtime data (do not commit)
+data/
+input/containers.xlsx
+data/container_HTML/
+data/attachments_backup_*
